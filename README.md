@@ -1,5 +1,5 @@
 ## springboot-mybatis-blog
-
+-github 주소 : <https://github.com/ssonsall/springboot-mybatis-blog>
 #### Main 화면
 ![메인화면](https://user-images.githubusercontent.com/55569886/70209661-37eac780-1774-11ea-80ce-5aea64ecb8de.png)
 
