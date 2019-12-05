@@ -1,6 +1,6 @@
-### springboot-mybatis-blog
+## springboot-mybatis-blog
 
-## My sql 사용자 생성, 데이터베이스 생성 및 테이블 생성
+#### My sql 사용자 생성, 데이터베이스 생성 및 테이블 생성
 1. 사용자 생성 및 데이터베이스 생성
 - create user 'blogmybatis'@'%' identified by 'bitc5600';
 - GRANT ALL PRIVILEGES ON *.* TO 'blogmybatis'@'%';
