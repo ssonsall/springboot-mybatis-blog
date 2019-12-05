@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- repository 패키지 경로.내xml파일명Repository 로생성 -->
+<mapper namespace="com.cos.blog.repository.BoardRepository">
+	<!-- 게시판 다 긁어 올 것이니까 findAll -->
+	<select id="findAll" resultType="com.cos.blog.model.View">
+		SELECT b.*, u.username,
+		u.userProfile
+		FROM board b JOIN user u
+		WHERE b.userId = u.id
+		ORDER BY
+		b.id DESC
+	</select>
+
+	<select id="findByPage" resultType="com.cos.blog.model.View">
+		SELECT b.*, u.username,
+		u.userProfile
+		FROM board b JOIN user u
+		WHERE b.userId = u.id
+		ORDER BY
+		b.id DESC 
+		LIMIT #{page},3
+	</select>
+
+	<select id="findById" resultType="com.cos.blog.model.View">
+		SELECT b.*, u.username,
+		u.userProfile
+		FROM board b JOIN user u
+		WHERE b.id = #{id}
+		AND b.userId =
+		u.id
+	</select>
+
+	<insert id="save">
+		<!-- 줄 바꿀때 한칸 띄우고 엔터쳐라 -->
+		INSERT INTO board(userId, title, content, createDate)
+		VALUES(#{userId},#{title},#{content},now())
+	</insert>
+
+	<insert id="delete">
+		<!-- 줄 바꿀때 한칸 띄우고 엔터쳐라 -->
+		DELETE FROM board WHERE id=#{id}
+	</insert>
+
+	<update id="update">
+		UPDATE board SET title=#{title}, content=#{content},
+		createDate=now()
+		WHERE id=#{id}
+	</update>
+	
+	<select id="count" resultType="int">
+		SELECT COUNT(id) FROM board
+	</select>
+
+</mapper>

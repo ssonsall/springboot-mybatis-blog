@@ -1,0 +1,26 @@
+#스페이스 규칙 잘지켜야한다.
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/blogmybatis?serverTimezone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: blogmybatis
+    password: bitc5600
+
+#파일업로드 용량 제한
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+#경로를 미리 지정 해둔다.
+file:
+  path: C:/Users/Administrator/Desktop/Springwork4/blog_mybatis/src/main/resources/static/userprofile/
