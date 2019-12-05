@@ -1,7 +1,7 @@
 ## springboot-mybatis-blog
 
 #### Main 화면
-
+![메인화면](https://user-images.githubusercontent.com/55569886/70209661-37eac780-1774-11ea-80ce-5aea64ecb8de.png)
 
 #### My sql 사용자 생성, 데이터베이스 생성 및 테이블 생성
 1. 사용자 생성 및 데이터베이스 생성
