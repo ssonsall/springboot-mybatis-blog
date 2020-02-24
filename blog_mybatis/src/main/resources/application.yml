@@ -23,4 +23,4 @@ spring:
       max-file-size: 10MB
 #경로를 미리 지정 해둔다.
 file:
-  path: C:/Users/Administrator/Desktop/Springwork4/blog_mybatis/src/main/resources/static/userprofile/
+  path: C:/Users/ssons/Documents/myGithub/springboot-mybatis-blog/blog_mybatis/src/main/resources/static/userprofile/
